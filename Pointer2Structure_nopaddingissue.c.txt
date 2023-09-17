@@ -1,0 +1,35 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+struct student{
+    
+   unsigned char sno8[3];
+   unsigned short int sno16[3];
+   int sno[3];
+   char sname[30];
+   float marks[3];
+};
+
+int main ( ){
+   struct student s;
+   struct student *st;
+   
+   printf("enter sname, marks and all snos:");
+   
+   scanf ("%d%d%d%d%d%d%d%d%d", &s.sno8[0], &s.sno8[1], &s.sno8[2],&s.sno16[0],&s.sno16[1],&s.sno16[2], &s.sno[0],&s.sno[1],&s.sno[2]);
+   scanf ("%s%f%f%f", s.sname, &s. marks[0],&s. marks[1],&s. marks[2]);
+
+   st = &s;
+   
+   printf ("details of the student are\n");
+   printf ("name = %s\n", st->sname);
+   
+   printf ("sno8 =%d %d %d\n", st ->sno8[0],st ->sno8[1],st ->sno8[2]);
+   printf ("sno16 =%d %d %d\n", st ->sno16[0],st ->sno16[1],st ->sno16[2]);
+   printf ("sno =%d %d %d\n", st ->sno[0],st ->sno[1],st ->sno[2]);
+
+   printf ("marks =%f %f %f\n", st ->marks[0],st ->marks[1],st ->marks[2]);
+   
+}
+
+
